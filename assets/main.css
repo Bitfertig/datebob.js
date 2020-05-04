@@ -97,6 +97,9 @@ main {
 main .container {
 
 }
+main h2 {
+	color: var(--color-primary);
+}
 main .example {
 	background-color: #efefef;
 	border-radius: 5px;

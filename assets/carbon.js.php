@@ -3,12 +3,12 @@
 header("Content-type: text/javascript");
 
 $scripts = [
-	'src/carbon.js',
-	'src/strtotime.js',
-	'src/date.js',
+	'../src/carbon.js',
+	'../src/strtotime.js',
+	'../src/date.js',
 ];
 
-$carbonjs = 'carbon.js';
+$carbonjs = '../carbon.js';
 $carbonjs_filemtime = filemtime($carbonjs);
 
 $uptodate = true;
