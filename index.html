@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>CarbonJS - Because time is beautiful</title>
-	<!-- <base href="http://tools.bitfertig.de/carbonjs/"> -->
 	<link rel="icon" href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">⌛</text></svg>'>
 	<meta name="description" content="">
 	<meta name="keywords" content="carbonjs, js, javascript, time, date">
@@ -58,6 +57,29 @@
 
 			<h2>Usage & demo</h2>
 
+			<div id="customExample">
+				<div class="row example">
+					<div class="col-6">
+						<textarea id="in" name="in" rows="3" style="width:100%;">carbon().toLocaleString();</textarea>
+					</div>
+					<div class="col-6">
+						<div class="out" id="out"></div>
+					</div>
+				</div>
+			</div>
+			<script>
+			document.addEventListener('DOMContentLoaded', function(event) {
+				var inElement = document.querySelector('#in');
+				var outElement = document.querySelector('#out');
+				function updateOut() {
+					let res = eval( inElement.value );
+					outElement.innerText = res;
+				}
+				updateOut();
+				inElement.addEventListener('input', updateOut);
+			});
+			</script>
+
 			<template id="exampleTemplate">
 				<div class="row example">
 					<div class="col-6">
@@ -78,7 +100,8 @@
 					{ codestr: `carbon()` },
 					{ codestr: `carbon() instanceof Date` },
 					{ codestr: `carbon() instanceof Carbon` },
-					{ codestr: `new Intl.DateTimeFormat('en-US').format(carbon())` },
+					{ codestr: `new Intl\n.DateTimeFormat('en-US')\n.format(carbon())` },
+					{ codestr: `new Intl\n.DateTimeFormat('de-DE')\n.format(carbon())` },
 					{ codestr: `carbon()\n.format('D, Y-m-d H:i:s')` },
 					{ codestr: `carbon('2020-01-01')\n.format('D, Y-m-d H:i:s')` },
 					{ codestr: `carbon('2020-01-01 12:34:56')\n.format('D, Y-m-d H:i:s')` },
@@ -140,12 +163,23 @@
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164640273-2"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
 
-	  gtag('config', 'UA-164640273-2', { 'anonymize_ip': true });
+	<script>
+	document.addEventListener('DOMContentLoaded', function(event) {
+		if ( location.host == 'tools.bitfertig.de' ) {
+	
+			// <base href="http://tools.bitfertig.de/carbonjs/">
+			var base = document.createElement('base');
+			base.href = 'http://tools.bitfertig.de/carbonjs/';
+			document.querySelector('head').appendChild(base);
+
+			// Google Tag Manager
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-164640273-2', { 'anonymize_ip': true });
+		}
+	});
 	</script>
 	
 </body>
