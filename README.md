@@ -42,3 +42,14 @@ carbon(String strtotime)
 ```bash
 php -S localhost:8000
 ```
+
+#### Ideas
+
+##### 1. New date formatting with Intl.DateTimeFormat language support
+Use this for formatting, and get language support:
+https://jsbin.com/velaqabivo/1/edit?js,console
+carbon().locale('de').format('F') // => Januar
+
+##### 2. New relative formatting with Intl.RelativeTimeFormat
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
+carbon().locale('en').relformat() // "in 3 days" or "3 days ago"
