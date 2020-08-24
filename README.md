@@ -1,5 +1,8 @@
-# Readme datebob.js
-DateBobJS is an javascript which recreates the good parts of php class [Carbon](https://carbon.nesbot.com/docs/) to have a nice and easy way to handle dates and times. DateBobJS combines two awesome javascripts ([strtotime](https://locutus.io/php/datetime/strtotime/) like [datetime formats](https://www.php.net/manual/de/datetime.formats.relative.php), [date](https://locutus.io/php/datetime/date/)) into one single javascript.
+[![install size](https://packagephobia.com/badge?p=@dipser/datebob.js)](https://packagephobia.com/result?p=@dipser/datebob.js)
+
+
+# datebob.js
+DateBobJS is a javascript which recreates the good parts of php class [Carbon](https://carbon.nesbot.com/docs/) to have a nice and easy way to handle dates and times. DateBobJS combines two awesome javascripts ([strtotime](https://locutus.io/php/datetime/strtotime/) like [datetime formats](https://www.php.net/manual/de/datetime.formats.relative.php), [date](https://locutus.io/php/datetime/date/)) into one single javascript.
 
 
 ## Demo
@@ -108,3 +111,8 @@ carbon().locale('de').format('F') // => Januar
 ##### 2. New relative formatting with Intl.RelativeTimeFormat
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 carbon().locale('en').relformat() // "in 3 days" or "3 days ago"
+
+
+### Statistics
+
+[Anvaka Graph](https://npm.anvaka.com/#!/view/3d/@dipser/datebob.js#/view/2d/%40dipser%2Fdatebob.js)
