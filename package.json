@@ -1,0 +1,51 @@
+{
+  "name": "@dipser/datebob.js",
+  "version": "0.3.2",
+  "description": "Parse and create dates.",
+  "author": "dipser",
+  "license": "MIT",
+  "main": "./dist/datebob.esm.js",
+  "module": "/dist/datebob.esm.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Bitfertig/datebob.js.git"
+  },
+  "keywords": [
+    "javascript",
+    "datebob.js",
+    "datebob",
+    "date",
+    "parse",
+    "format",
+    "strtotime",
+    "datetime",
+    "carbon"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-modules-amd": "^7.10.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "@babel/plugin-transform-modules-umd": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "@purtuga/esm-webpack-plugin": "^1.2.1",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "rollup": "^2.23.1",
+    "sass-loader": "^9.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "dev": "webpack --config webpack.config.js --watch --env.MODE=development --env.API_URL=http://localhost:8080/api",
+    "build": "webpack --config webpack.config.js --mode='production' --env.MODE=production --env.API_URL=http://localhost:8080/api",
+    "serve": "npx http-server",
+    "start": "webpack-dev-server --open --mode development --port 8081 --env.API_URL=http://localhost:8080/api"
+  }
+}
