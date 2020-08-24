@@ -52,7 +52,7 @@ datebob(String strtotime)
 | .format(String *format*)  	| See php.net/date  	|
 
 
-### Examples
+## Examples
 
 ```javascript
 datebob()
@@ -68,40 +68,34 @@ datebob('2020-01-01').modify('+ 1 day').format('D, Y-m-d H:i:s')
 // => Thu, 2020-01-02 00:00:00
 ```
 
-### Developing this npm package
+## Contributing to this npm package
 
-Wenn Anpassungen vorgenommen werden, wechselt zuerst in das Verzeichnis:
 
 ```bash
+# go to directory
 cd .../project
-```
 
-Unter Umständen müsst ihr es noch installieren:
-
-```bash
+# install npm dependencies
 npm install
-```
 
-Nun könnt ihr die Dateiänderungen automatisch überwachen lassen:
-
-```bash
+# run webpack watcher and then open development url
 npm run dev
-```
 
-Wenn Ihr fertig seid, führt den Befehl für den produktiven Einsatz aus:
-
-```bash
+# create a build
 npm run build
 ```
 
-#### Publishing npm package
+## Publishing npm package
+
+Publish to: @dipser/datebob.js
 
 ```bash
 npm publish
 ```
 
 
-#### Ideas
+-----
+## Ideas
 
 ##### 1. New date formatting with Intl.DateTimeFormat language support
 Use this for formatting, and get language support:
@@ -113,6 +107,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 carbon().locale('en').relformat() // "in 3 days" or "3 days ago"
 
 
-### Statistics
+## Statistics
 
 [Anvaka Graph](https://npm.anvaka.com/#!/view/3d/@dipser/datebob.js#/view/2d/%40dipser%2Fdatebob.js)
