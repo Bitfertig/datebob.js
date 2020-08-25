@@ -21,12 +21,11 @@ npm i @dipser/datebob.js
 
 ```html
 <script type="module">
-import { DateBob } from "@dipser/datebob.js";
+import { datebob, DateBob } from "@dipser/datebob.js";
 
 console.log( new DateBob('now') );
 
-var datebob = DateBob.func; // Usage as function datebob('now')
-console.log( datebob('now')
+console.log( datebob('now') );
 </script>
 ```
 
@@ -37,7 +36,6 @@ console.log( datebob('now')
 
 ```js
 new DateBob()
-var datebob = DateBob.func; // Static function
 datebob() // now
 datebob(Date date)
 datebob(DateBob datebob)

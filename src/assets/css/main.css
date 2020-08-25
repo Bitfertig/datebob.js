@@ -4,8 +4,9 @@
 
 
 :root {
-	--color-primary: rebeccapurple;
-	--color-secondary: #fff703;
+	--color-primary: #039aff;
+	--color-secondary: rgb(156, 5, 5);
+	--color-tertiary: rebeccapurple;
 	--font-primary: sans-serif;
 	--font-secondary: "Lucida Console", Monaco, monospace;
 }
@@ -30,26 +31,33 @@ body {
 }
 
 
+main a {
+	color: var(--color-primary);
+	text-decoration: none;
+}
+main a:hover {
+	color: var(--color-secondary);
+	text-decoration: underline;
+}
+
 
 .container {
 	max-width: 900px;
 	margin: 0 auto;
-	padding: 0 15px;
+	/* padding: 0 15px; */
 }
-
-
 
 .row {
 	display: flex;
 	flex-direction: row;
-	padding-left: -15px;
-	padding-right: -15px;
+	/* margin-right: -7.5px;
+	margin-left: -7.5px; */
 }
 .col-6 {
 	flex: 0 0 50%;
 	max-width: 50%;
-	padding-left: -7.5px;
-	padding-right: -7.5px;
+	padding-right: 7.5px;
+	padding-left: 7.5px;
 }
 
 
@@ -75,6 +83,7 @@ header {
 	background-color: var(--color-primary);
 	color: var(--color-secondary);
 	padding: 20px 0;
+	border-bottom: 10px solid var(--color-tertiary);
 }
 header h1 {
 	text-align: center;
@@ -99,11 +108,13 @@ main .container {
 }
 main h2 {
 	color: var(--color-primary);
+	text-align: center;
+	margin-top: 50px;
 }
 main .example {
 	background-color: #efefef;
 	border-radius: 5px;
-	padding: 5px 15px;
+	padding: 5px 0;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	box-shadow: 0 1px 1px rgba(102,119,136,.55);
@@ -115,6 +126,12 @@ main .example pre > code.in {
 	max-width: 100%;
 	overflow: auto;
 	padding: 0;
+}
+
+main .javascript_badge {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 

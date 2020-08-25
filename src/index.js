@@ -1,1 +1,1 @@
-export { DateBob } from './datebob.js';
+export { datebob, DateBob } from './datebob.js';

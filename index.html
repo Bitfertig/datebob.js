@@ -55,9 +55,8 @@
 
 			<pre><code class="language-html"><!--
 			-->&lt;script type="module"&gt;<br><!--
-			-->import { DateBob } from "@dipser/datebob.js";<br><!--
-			-->var datebob = DateBob.func; // Usage as function datebob('now')<br><!--
-			-->console.log( datebob('now'), new DateBob('now') );<br><!--
+			-->import { datebob, DateBob } from "@dipser/datebob.js";<br><!--
+			-->datebob('now'); // = new DateBob('now');<br><!--
 			-->&lt;/script&gt;<!--
 			--></code></pre>
 
@@ -75,8 +74,7 @@
 				</div>
 			</div>
 			<script type="module">
-			import { DateBob } from './dist/datebob.esm.js';
-			var datebob = DateBob.func;
+			import { datebob, DateBob } from './dist/datebob.esm.js';
 			document.addEventListener('DOMContentLoaded', function(event) {
 				var inElement = document.querySelector('#in');
 				var outElement = document.querySelector('#out');
@@ -104,8 +102,7 @@
 
 
 			<script type="module">
-			import { DateBob } from './dist/datebob.esm.js';
-			var datebob = DateBob.func;
+			import { datebob, DateBob } from './dist/datebob.esm.js';
             document.addEventListener('DOMContentLoaded', function() {
 				let examplesEl = document.querySelector('#examples');
 				let examples = [
@@ -127,8 +124,8 @@
 					{ codestr: `datebob('2021-01-01') < datebob('2020-01-01')` },
 					{ codestr: `datebob('2020-01-01') < datebob('2021-01-01')` },
 					{ codestr: `+datebob('2020-01-01') == +datebob('2020-01-01')` },
-					{ codestr: `let carbon1 = datebob('2020-01-01');\nlet carbon2 = datebob('2020-01-01');\ncarbon2.getTime() == carbon2.getTime()` },
-					{ codestr: `let carbon1 = datebob('2020-01-01');\nlet carbon2 = datebob('2020-01-01');\ncarbon1 == carbon2\n// Carefull!` }
+					{ codestr: `let d1 = datebob('2020-01-01');\nlet d2 = datebob('2020-01-01');\nd2.getTime() == d2.getTime()` },
+					{ codestr: `let d1 = datebob('2020-01-01');\nlet d2 = datebob('2020-01-01');\nd1 == d2\n// Carefull!` }
 				];
 
 				for (let i in examples) {
@@ -151,8 +148,13 @@
 				<li><a href="https://www.npmjs.com/package/@dipser/datebob.js">npm package</a></a></li>
 				<li><a href="https://github.com/bitfertig/datebob.js">Repository on GitHub</a></li>
 				<li><a href="https://stackoverflow.com/questions/tagged/datebob.js">Questions on Stackoverflow</a></li>
+				<li><a href="https://twitter.com/dipser/">Twitter</a></li>
 			</ul>
 
+
+			<div class="javascript_badge">
+				<img src="src/assets/img/javascript_badge.svg" width="75" alt="">
+			</div>
 
 		</div>
 	</main>

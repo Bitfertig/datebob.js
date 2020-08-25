@@ -51,5 +51,7 @@ class DateBob extends Date {
     }
 }
 
-export { DateBob };
+const datebob = DateBob.func;
+
+export { datebob, DateBob };
 
