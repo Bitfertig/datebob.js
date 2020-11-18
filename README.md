@@ -1,4 +1,7 @@
+[![npm version](https://badge.fury.io/js/%40dipser%2Fdatebob.js.svg)](https://badge.fury.io/js/%40dipser%2Fdatebob.js)
 [![install size](https://packagephobia.com/badge?p=@dipser/datebob.js)](https://packagephobia.com/result?p=@dipser/datebob.js)
+![](https://img.badgesize.io/Bitfertig/datebob.js/master/dist/datebob.esm.js?label=JS_file)
+
 
 
 # datebob.js
@@ -7,7 +10,7 @@ DateBobJS is a javascript which recreates the good parts of php class [Carbon](h
 
 ## Demo
 
-http://tools.bitfertig.de/datebob.js
+http://tools.bitfertig.de/datebob.js/
 
 
 ## Installation
@@ -22,9 +25,7 @@ npm i @dipser/datebob.js
 ```html
 <script type="module">
 import { datebob, DateBob } from "@dipser/datebob.js";
-
 console.log( new DateBob('now') );
-
 console.log( datebob('now') );
 </script>
 ```
@@ -108,3 +109,9 @@ carbon().locale('en').relformat() // "in 3 days" or "3 days ago"
 ## Statistics
 
 [Anvaka Graph](https://npm.anvaka.com/#!/view/3d/@dipser/datebob.js#/view/2d/%40dipser%2Fdatebob.js)
+
+
+## Alternatives
+
+[dayjs](https://github.com/iamkun/dayjs/),
+[momentjs](https://github.com/moment/moment/)
